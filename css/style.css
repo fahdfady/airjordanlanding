@@ -1,0 +1,170 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-transition: .2s all linear;
+  transition: .2s all linear;
+  -webkit-transition: 0s color;
+  transition: 0s color;
+}
+
+body {
+  background: #2B2E4A;
+  font-size: 16px;
+  color: #c2c5e0;
+  font-family: 'Righteous', sans-serif;
+}
+
+section {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: #212529;
+}
+
+.banner .image-container:before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  top: 0px;
+  right: 0;
+  z-index: -1;
+  width: 420px;
+  height: 300px;
+  background: radial-gradient(circle at center, #2b2e01 2%, transparent 14%), transparent;
+  background-size: 26px 26px;
+  background-position: 100%;
+  background-repeat: repeat;
+  border: none;
+  -webkit-transform: translate(2.2vw, 35%);
+          transform: translate(2.2vw, 35%);
+}
+
+.skewed {
+  background: #E84545;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -webkit-transform: skewY(9deg);
+          transform: skewY(9deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.skewed .layer {
+  width: 100%;
+  text-align: center;
+  -webkit-transform: skewY(-9deg);
+          transform: skewY(-9deg);
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.text-slogan {
+  font-size: 80px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: unset;
+}
+
+.description {
+  text-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.description .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.description .row .column {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.description strong {
+  font-size: 20px;
+}
+
+.description small {
+  font-size: 16px;
+}
+
+.description strong,
+.description small,
+.details strong,
+.details small {
+  display: block;
+  margin: 3px 0px;
+}
+
+section {
+  margin: auto !important;
+}
+/*# sourceMappingURL=style.css.map */
