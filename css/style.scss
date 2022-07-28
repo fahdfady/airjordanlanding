@@ -191,6 +191,7 @@ section {
     @include centerY();
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 44px 0px;
 
     &:nth-of-type(even) {
         flex-direction: row-reverse;
