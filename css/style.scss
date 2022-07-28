@@ -1,14 +1,55 @@
+$widths: (sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px);
+
+:root {
+    --main-color: #E84545;
+    --secondary-color: #212529;
+}
+
 @mixin centerAll {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centerX {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin centerY {
+    display: flex;
+    align-items: center;
+}
+
+::selection {
+    background: var(--secondary-color);
+    color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 4px;
+    border: 1px solid rgb(44, 21, 21)
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     transition: .2s all linear;
     transition: 0s color;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,15 +60,32 @@ body {
 }
 
 section {
-    @include centerAll();
-    justify-content: space-between !important;
+    @include centerY();
+    justify-content: space-between;
+}
+
+.back-text {
+    font-size: 138px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: rgba(86, 86, 86, 0.891);
+    position: absolute;
+    bottom: 155px;
+    left: 60px;
+    z-index: 1;
+}
+
+.row {
+    display: flex;
 }
 
 .banner {
     width: 100%;
     height: 100vh;
     position: relative;
-    color: #212529;
+    color: var(--secondary-color);
 
     .image-container:before {
         display: inline-block;
@@ -48,7 +106,7 @@ section {
 }
 
 .skewed {
-    background: #E84545;
+    background: var(--main-color);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -80,6 +138,8 @@ section {
 
 .image-container {
     position: relative;
+    padding: 18px;
+    margin: 10px 0px;
 
     img {
         width: 100%;
@@ -89,14 +149,13 @@ section {
 
 .description {
     text-align: start;
-    display: flex;
+    @include centerY();
     flex-direction: column;
-    align-items: center;
 
     .row {
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
+        flex-direction: column;
         text-align: left;
         width: fit-content;
 
@@ -122,10 +181,18 @@ section {
         display: block;
         margin: 3px 0px;
     }
-
-
 }
 
 section {
     margin: auto !important;
+}
+
+.product {
+    @include centerY();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
 }
